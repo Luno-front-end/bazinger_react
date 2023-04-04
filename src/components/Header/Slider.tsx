@@ -1,26 +1,49 @@
 import React, { FC } from "react";
 
-import svgSpryte from "../../img/spryte.svg";
+import sOne from "../../img/slide_one.jpg";
+import sTwo from "../../img/slide_two.jpg";
+import sThree from "../../img/slide_three.jpg";
+
+import { Carousel } from "react-carousel-minimal";
 
 export const Slider: FC = () => {
+  const data = [
+    {
+      image: sOne,
+    },
+    {
+      image: sTwo,
+    },
+    {
+      image: sThree,
+    },
+  ];
+
+  const captionStyle = {
+    display: "none",
+  };
+
   return (
-    <div className="slider-wrapper">
-      <button className="slide-arrow" id="slide-arrow-prev">
-        <svg className="arrow-icon-prev">
-          <use href={`${svgSpryte}#arrow`}></use>
-        </svg>
-      </button>
-      <button className="slide-arrow" id="slide-arrow-next">
-        <svg className="arrow-icon-next">
-          <use href={`${svgSpryte}#arrow`}></use>
-        </svg>
-      </button>
-      <ul className="slides-container" id="slides-container">
-        <li className="slide"></li>
-        <li className="slide"></li>
-        <li className="slide"></li>
-      </ul>
-      <div className="wrapper-amount"></div>
+    <div>
+      <div id="download">
+        <Carousel
+          data={data}
+          time={2000}
+          width="100%"
+          captionStyle={captionStyle}
+          slideNumber={false}
+          automatic={false}
+          dots={true}
+          pauseIconColor="white"
+          pauseIconSize="40px"
+          slideBackgroundColor="darkgrey"
+          slideImageFit="cover"
+          thumbnails={false}
+          thumbnailWidth="100px"
+          heigh="100%"
+          className="true-slider"
+        />
+      </div>
     </div>
   );
 };

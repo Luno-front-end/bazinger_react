@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Btn } from "../Btn";
 
 import svgSpryte from "../../img/spryte.svg";
 
@@ -17,14 +18,10 @@ export const Hiro: FC = () => {
         </p>
         <ul className="list-btn-hiro">
           <li className="item-btn-hiro">
-            <button type="submit" className="btn-hiro">
-              Download
-            </button>
+            <Btn className="btn-hiro">Download</Btn>
           </li>
           <li className="item-btn-hiro">
-            <button type="submit" className="btn-hiro">
-              Learn more
-            </button>
+            <Btn className="btn-hiro">Learn more</Btn>
           </li>
         </ul>
         <div className="wrapper-apps">

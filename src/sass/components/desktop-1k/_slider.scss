@@ -1,9 +1,8 @@
 @media screen and (min-width: $desktop-1k) {
-  .slider-wrapper {
-    height: 1000px;
+  .carousel-container {
+    height: 1000px !important;
   }
-
-  .slides-container {
-    height: 1000px;
+  .carousel-item {
+    max-height: 100% !important;
   }
 }

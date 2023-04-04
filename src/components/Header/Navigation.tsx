@@ -1,91 +1,61 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
+import { useActiveNav } from "../hook/useActiveNav";
+import { BurgerMenu } from "./BurgerMenu";
 
-import imgLogoPng from "../../img/logo_signa.png";
-import imgLogoWebp from "../../img/logo_signa.webp";
+import { Logo } from "./Logo";
+
+const itemNavigation = [
+  { name: "Home", anchor: true },
+  { name: "Features", anchor: true },
+  { name: "Gallery", anchor: true },
+  { name: "Video", anchor: true },
+  { name: "Price", anchor: false },
+  { name: "Testimonials", anchor: false },
+  { name: "Download", anchor: true },
+  { name: "Contact", anchor: true },
+];
 
 export const Navigation: FC = () => {
+  const listEl = useRef<HTMLUListElement>(null);
+
+  const [isActive, setIsActive] = useState<boolean>(false);
+
+  const { scrollToSection } = useActiveNav();
+
+  useEffect(() => {
+    const ulElement = listEl.current;
+    const liElements = Array.from(ulElement!.querySelectorAll("li > a"));
+    liElements[0].classList.add("active-nav");
+  }, []);
+
+  const handlerClick = (e: React.MouseEvent) => {
+    scrollToSection(e, listEl);
+    setIsActive(false);
+  };
+
   return (
     <nav className="nav-container">
       <div className="container wrapper-nav">
-        <div className="logo-container">
-          <a href="#" className="logo-link">
-            <div className="logo-box">
-              <picture>
-                <source
-                  srcSet={imgLogoWebp}
-                  type="image/webp"
-                  width="27"
-                  height="11"
-                />
-
-                <source
-                  srcSet={imgLogoPng}
-                  type="image/jpeg"
-                  width="27"
-                  height="11"
-                />
-                <img
-                  src={imgLogoPng}
-                  alt="signal logo"
-                  width="27"
-                  height="11"
-                  className="signal-img-logo"
-                />
-              </picture>
-
-              <span className="logo-text">
-                ba<span className="logo-subText">zinger</span>
-              </span>
-            </div>
-          </a>
-        </div>
-        <div className="list-container">
-          <ul className="list-nav">
-            <li className="item-nav">
-              <a href="#home" className="link-nav active">
-                Home
-              </a>
-            </li>
-            <li className="item-nav">
-              <a href="#features" className="link-nav">
-                Features
-              </a>
-            </li>
-            <li className="item-nav">
-              <a href="#gallery" className="link-nav">
-                Gallery
-              </a>
-            </li>
-            <li className="item-nav">
-              <a href="#video" className="link-nav">
-                Video
-              </a>
-            </li>
-            <li className="item-nav">
-              <a href="#" className="link-nav">
-                Price
-              </a>
-            </li>
-            <li className="item-nav">
-              <a href="#" className="link-nav">
-                Testimonials
-              </a>
-            </li>
-            <li className="item-nav">
-              <a href="#home" className="link-nav">
-                Download
-              </a>
-            </li>
-            <li className="item-nav">
-              <a href="#contact" className="link-nav">
-                Contact
-              </a>
-            </li>
+        <Logo />
+        <div
+          className={
+            isActive ? "list-container active-mob-menu" : "list-container "
+          }
+        >
+          <ul className="list-nav" onClick={handlerClick} ref={listEl}>
+            {itemNavigation.map((item, i) => (
+              <li className="item-nav" key={i}>
+                <a
+                  href={`#${item.anchor ? item.name.toLocaleLowerCase() : ""}`}
+                  className="link-nav"
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
-        <button type="button" className="wrapper-burger">
-          <span className="burger"></span>
-        </button>
+        <BurgerMenu isActive={isActive} setIsActive={setIsActive} />
       </div>
     </nav>
   );
