@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/bazinger_react/static/css/main.f62bfd44.css",
+    "main.js": "/bazinger_react/static/js/main.8d4c618d.js",
+    "static/media/promo_video.mp4": "/bazinger_react/static/media/promo_video.43e4f46b691d9eff104b.mp4",
+    "static/media/slide_three.jpg": "/bazinger_react/static/media/slide_three.b1af730256f12d76f11f.jpg",
+    "static/media/slide_two.jpg": "/bazinger_react/static/media/slide_two.a4d3f8f17ca6016bfdfb.jpg",
+    "static/media/slide_one.jpg": "/bazinger_react/static/media/slide_one.bbfb33bd11c46eedd916.jpg",
+    "static/media/service_two.jpeg": "/bazinger_react/static/media/service_two.2a756b9fba8a2f630765.jpeg",
+    "static/media/service_three.jpeg": "/bazinger_react/static/media/service_three.6e5fb0b3ff3be9f0b90d.jpeg",
+    "static/media/service_two.webp": "/bazinger_react/static/media/service_two.af84da876fa4a3494552.webp",
+    "static/media/service_three.webp": "/bazinger_react/static/media/service_three.92f2e4726b861193952a.webp",
+    "static/media/service.webp": "/bazinger_react/static/media/service.67972f2113cfe26a28b1.webp",
+    "static/media/spryte.svg": "/bazinger_react/static/media/spryte.d493f60bc67743ed52ae986ddb7d665f.svg",
+    "static/media/phone_help.webp": "/bazinger_react/static/media/phone_help.ed2bb265205c222e1e48.webp",
+    "index.html": "/bazinger_react/index.html",
+    "static/media/logo_signa.webp": "/bazinger_react/static/media/logo_signa.a6fd732b685b941ee163.webp",
+    "main.f62bfd44.css.map": "/bazinger_react/static/css/main.f62bfd44.css.map",
+    "main.8d4c618d.js.map": "/bazinger_react/static/js/main.8d4c618d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f62bfd44.css",
+    "static/js/main.8d4c618d.js"
+  ]
+}
