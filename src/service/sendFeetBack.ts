@@ -1,13 +1,13 @@
 import axios from "axios";
 
- const sendFeetBack = async (
+const sendFeetBack = async (
   name: string,
   email: string,
   subject: string,
   message: string
 ) => {
   try {
-    await axios.post("http://localhost:8080/feetback", {
+    await axios.post("https://bazinger-backend.onrender.com/feetback", {
       name,
       email,
       subject,
@@ -18,9 +18,8 @@ import axios from "axios";
   }
 };
 
-
 const API = {
-    sendFeetBack
-}
+  sendFeetBack,
+};
 
-export default API
+export default API;
