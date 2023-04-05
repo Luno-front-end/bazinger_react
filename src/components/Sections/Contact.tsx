@@ -1,8 +1,16 @@
-import React, { FC } from "react";
+import React, { Dispatch, FC, SetStateAction } from "react";
 import Iframe from "react-iframe";
 import { Form } from "../Form";
 
-export const Contact: FC = () => {
+interface ContactProps {
+  isActivePopUP: boolean;
+  setIsActivePopUP: Dispatch<SetStateAction<boolean>>;
+}
+
+export const Contact: FC<ContactProps> = ({
+  isActivePopUP,
+  setIsActivePopUP,
+}) => {
   return (
     <section id="contact" className="contact">
       <div className="wrapper-map">
@@ -19,7 +27,10 @@ export const Contact: FC = () => {
         <div className="container positio-contact">
           <div className="wrapper-form">
             <h2 className="header-contact">Contact</h2>
-            <Form />
+            <Form
+              isActivePopUP={isActivePopUP}
+              setIsActivePopUP={setIsActivePopUP}
+            />
           </div>
         </div>
       </div>

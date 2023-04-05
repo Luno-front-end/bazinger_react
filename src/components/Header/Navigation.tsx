@@ -4,16 +4,7 @@ import { BurgerMenu } from "./BurgerMenu";
 
 import { Logo } from "./Logo";
 
-const itemNavigation = [
-  { name: "Home", anchor: true },
-  { name: "Features", anchor: true },
-  { name: "Gallery", anchor: true },
-  { name: "Video", anchor: true },
-  { name: "Price", anchor: false },
-  { name: "Testimonials", anchor: false },
-  { name: "Download", anchor: true },
-  { name: "Contact", anchor: true },
-];
+import { itemNavigation } from "../../data/dataComponents";
 
 export const Navigation: FC = () => {
   const listEl = useRef<HTMLUListElement>(null);

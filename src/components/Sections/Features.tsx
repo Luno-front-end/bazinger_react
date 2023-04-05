@@ -1,30 +1,8 @@
 import React, { FC } from "react";
 
-import svgSpryte from "../../img/spryte.svg";
 import { HeaderSection } from "../HeaderSection";
 
-const featuresList = [
-  {
-    img: `${svgSpryte}#layers_icon`,
-    header: "Attractive Layout",
-    text: "Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.",
-  },
-  {
-    img: `${svgSpryte}#mobile_icon`,
-    header: "Fresh Design",
-    text: "Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.",
-  },
-  {
-    img: `${svgSpryte}#message_icon`,
-    header: "multipurpose",
-    text: "Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.",
-  },
-  {
-    img: `${svgSpryte}#comment_icon`,
-    header: "Easy to customize",
-    text: "Nunc cursus libero purus ac congue arcu cursus ut sed vitae pulvinar massa idporta nequetiam elerisque mi id faucibus iaculis vitae pulvinar.",
-  },
-];
+import { featuresList } from "../../data/dataComponents";
 
 export const Features: FC = () => {
   return (

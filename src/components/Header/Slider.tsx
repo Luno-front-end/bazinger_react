@@ -28,11 +28,11 @@ export const Slider: FC = () => {
       <div id="download">
         <Carousel
           data={data}
-          time={2000}
+          time={4000}
           width="100%"
           captionStyle={captionStyle}
           slideNumber={false}
-          automatic={false}
+          automatic={true}
           dots={true}
           pauseIconColor="white"
           pauseIconSize="40px"
