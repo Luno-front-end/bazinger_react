@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bazinger_react/static/css/main.f62bfd44.css",
-    "main.js": "/bazinger_react/static/js/main.8d4c618d.js",
+    "main.css": "/bazinger_react/static/css/main.5f993c74.css",
+    "main.js": "/bazinger_react/static/js/main.1efbc63f.js",
     "static/media/promo_video.mp4": "/bazinger_react/static/media/promo_video.43e4f46b691d9eff104b.mp4",
     "static/media/slide_three.jpg": "/bazinger_react/static/media/slide_three.b1af730256f12d76f11f.jpg",
     "static/media/slide_two.jpg": "/bazinger_react/static/media/slide_two.a4d3f8f17ca6016bfdfb.jpg",
@@ -15,11 +15,11 @@
     "static/media/phone_help.webp": "/bazinger_react/static/media/phone_help.ed2bb265205c222e1e48.webp",
     "index.html": "/bazinger_react/index.html",
     "static/media/logo_signa.webp": "/bazinger_react/static/media/logo_signa.a6fd732b685b941ee163.webp",
-    "main.f62bfd44.css.map": "/bazinger_react/static/css/main.f62bfd44.css.map",
-    "main.8d4c618d.js.map": "/bazinger_react/static/js/main.8d4c618d.js.map"
+    "main.5f993c74.css.map": "/bazinger_react/static/css/main.5f993c74.css.map",
+    "main.1efbc63f.js.map": "/bazinger_react/static/js/main.1efbc63f.js.map"
   },
   "entrypoints": [
-    "static/css/main.f62bfd44.css",
-    "static/js/main.8d4c618d.js"
+    "static/css/main.5f993c74.css",
+    "static/js/main.1efbc63f.js"
   ]
 }
